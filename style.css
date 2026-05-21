@@ -1,0 +1,286 @@
+/* ==========================================
+   全般のリセットと基本設定
+   ========================================== */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* ダークモード風の黒背景 */
+    color: #ffffff;
+    text-align: center;
+    scroll-behavior: smooth; /* メニューをクリックしたとき滑らかにスクロールさせる */
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    background-color: #2a2a2a;
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+
+/* ==========================================
+   🌐 ナビゲーションバー（上部タブメニュー）
+   ========================================== */
+.navbar {
+    position: fixed;      /* 画面上部に固定 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #222222;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    z-index: 1000;        /* 一番手前に表示 */
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* ロゴとメニューを左右に離す */
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-logo {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;        /* メニューを横並びにする */
+}
+
+.nav-menu > li {
+    position: relative;   /* ドロップダウンの位置基準 */
+}
+
+.nav-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #ccc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s, background 0.2s;
+}
+
+.nav-menu a:hover {
+    color: #fff;
+    background-color: #333;
+    border-radius: 4px;
+}
+
+/* 🔽 ドロップダウン（隠しメニュー） */
+.dropdown-menu {
+    position: absolute;   /* ボタンの真下に浮かせる */
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    min-width: 150px;
+    text-align: left;
+    display: none;        /* 初期状態は非表示 */
+}
+
+/* マウスが乗ったら表示 */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    padding: 10px 20px;
+    border-radius: 0;
+}
+
+.dropdown-menu a.yt-link:hover {
+    background-color: #ff0000; /* YouTubeホバー時の赤 */
+    color: #fff;
+}
+
+.dropdown-menu a.dc-link:hover {
+    background-color: #5865F2; /* Discordホバー時の青 */
+    color: #fff;
+}
+
+/* ==========================================
+   👤 ヘッダーとアイコン画像
+   ========================================== */
+header {
+    padding: 100px 20px 50px 20px; /* 上部バーに被らないよう上の余白を広めに */
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); /* 青グラデーション */
+}
+
+.my-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* 正円にする */
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+header h1 {
+    margin: 10px 0;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 0;
+    color: #ddd;
+}
+
+/* ==========================================
+   📢 お知らせ（News）
+   ========================================== */
+.news-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    text-align: left;
+}
+
+.news-list li {
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid #444;
+    flex-wrap: wrap;
+}
+
+.news-list li:last-child {
+    border-bottom: none;
+}
+
+.news-date {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-right: 15px;
+    min-width: 90px;
+}
+
+.news-badge {
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-right: 15px;
+    color: #fff;
+}
+
+.badge-new { background-color: #ff3838; }
+.badge-info { background-color: #2ed573; }
+.badge-youtube { background-color: #ff0000; }
+
+.news-text {
+    margin: 0;
+    flex: 1;
+    min-width: 200px;
+    color: #eee;
+}
+
+/* ==========================================
+   ⛏️ スキン配布（Minecraft Skins）
+   ========================================== */
+.skin-card {
+    border: 2px solid #444;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #333;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+.skin-preview {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.rules {
+    text-align: left;
+    max-width: 500px;
+    margin: 20px auto 0;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.rules h3 {
+    margin-top: 0;
+}
+
+/* ボタンの共通デザイン */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.download { background-color: #2ed573; }
+.download:hover { background-color: #26af5f; }
+
+/* ==========================================
+   ✉️ お問い合わせフォーム（Contact）
+   ========================================== */
+.form-wrapper {
+    max-width: 640px;
+    margin: 20px auto 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+/* ==========================================
+   📝 フッター
+   ========================================== */
+footer {
+    padding: 20px;
+    background-color: #111111;
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 60px;
+}
+
+/* ==========================================
+   画面が狭いスマホ用の調整
+   ========================================== */
+@media (max-width: 600px) {
+    .nav-container {
+        flex-direction: column; /* スマホではロゴとメニューを縦並びに */
+        padding: 5px;
+    }
+    .nav-menu a {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+    header {
+        padding: 140px 20px 40px 20px;
+    }
+    .news-list li {
+        padding: 10px;
+    }
+    .news-text {
+        margin-top: 5px;
+        width: 100%;
+        flex: none;
+    }
+}

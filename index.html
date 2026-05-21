@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マイクラスキン配布 & 活動まとめ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 🌐 ナビゲーションバー（上部タブメニュー） -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">MySite</a>
+            <ul class="nav-menu">
+                <li><a href="#">ホーム</a></li>
+                <li><a href="#news">お知らせ</a></li>
+                <li><a href="#skins">スキン配布</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+                <!-- 🔽 マウスを乗せると下に開くメニュー -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-trigger">公式リンク ▼</a>
+                    <ul class="dropdown-menu">
+                        <!-- あなたのYouTubeとDiscordのURLに書き換えてください -->
+                        <li><a href="https://www.youtube.com/@ttboygames" target="_blank" class="yt-link">YouTube</a></li>
+                        <li><a href="https://discord.gg/7SgBGfyCRF" target="_blank" class="dc-link">Discord</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 👤 ヘッダー（アイコン画像とタイトル） -->
+    <header>
+        <!-- icon.png をあなたのアイコン画像の名前に変えてください -->
+        <img src="image/icon.png" alt="自分のアイコン" class="my-icon">
+        <h1>Welcome to TTBOY Website</h1>
+        <p>YouTubeやDiscordのコミュニティへようこそ！</p>
+    </header>
+
+    <main>
+
+        <!-- 📢 お知らせ（News）コーナー -->
+        <section id="news" class="news">
+            <h2>News</h2>
+            <ul class="news-list">
+                <!-- ニュースを新しく追加するときは、ここから -->
+                <li>
+                    <span class="news-date">2026.05.21</span>
+                    <span class="news-badge badge-new">重要</span>
+                    <p class="news-text">オフィシャルWebサイトをオープンしました！</p>
+                </li>
+                <!-- ここまでをコピーして上に貼り付けて増やせます -->
+                <li>
+                    <span class="news-date">2026.05.15</span>
+                    <span class="news-badge badge-info">更新</span>
+                    <p class="news-text">新作のマイクラスキン（第1弾）を公開！ダウンロードして使ってみてね。</p>
+                </li>
+                <li>
+                    <span class="news-date">2026.05.10</span>
+                    <span class="news-badge badge-youtube">動画</span>
+                    <p class="news-text">やる気が出たら投稿する！</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ⛏️ スキン配布コーナー -->
+        <section id="skins" class="skins">
+            <h2>Minecraft Skins</h2>
+            <div class="skin-card">
+                <!-- preview.png をあなたのスキン見本画像（スクリーンショットなど）の名前に変えてください -->
+                <img src="image/preview.png" alt="スキンの見本" class="skin-preview">
+                <h3>配布スキン 第1弾</h3>
+                <p>クラシック（4px）サイズ用です。動画での使用OK！</p>
+                
+                <!-- skin.png をあなたのスキンファイル（.png）の名前に変えてください -->
+                <a href="image/ttskin.png" download="image/ttskin.png" class="btn download">スキンをダウンロード</a>
+            </div>
+            
+            <div class="rules">
+                <h3>⚠️ 利用規約</h3>
+                <ul>
+                    <li>自作発言、二次配布（勝手に他の場所で配ること）は禁止です。</li>
+                    <li>動画や配信での使用は自由です！報告も不要です。</li>
+                    <li>×128のスキンなのでJAVA版では使用できません。</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ✉️ お問い合わせフォームコーナー -->
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <p>お仕事のご依頼やお問い合わせは、以下のフォームよりご連絡ください。</p>
+            
+            <div class="form-wrapper">
+                <!-- 👇Googleフォームでコピーした <iframe> のコードをここにそのまま貼り付けます -->
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScwkEUJH8gjy_kTr2jb4GvHBB3ev0RX9tGLyMgYIqp931oLPw/viewform?usp=publish-editor" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 📝 フッター（コピーライト） -->
+    <footer>
+        <p>&copy; 2026 TTBOYGames</p>
+    </footer>
+
+</body>
+</html>
